@@ -23,10 +23,9 @@ void dfs(int i, int j) {
 		if(ii < 0 || jj < 0 || ii >= h || jj >= w) {
 			continue;
 		}
-		if(a[ii][jj] != symbol) {
-			continue;
+		if(a[ii][jj] == symbol){
+			dfs(ii, jj);
 		}
-		dfs(ii, jj);
 	}
 }
 
